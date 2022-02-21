@@ -2,8 +2,8 @@ import Head from 'next/head'
 import { PostCard, Categories, PostWidget } from '../components'
 
 const post = [
-  { title: 'React Testing', exercpt: 'Learn React Testing'},
-  { title: 'React with Tailwind', exercpt: 'Learn React with Tailwind'}
+  { title: 'React Testing', excerpt: 'Learn React Testing'},
+  { title: 'React with Tailwind', excerpt: 'Learn React with Tailwind'}
 ]
 
 export default function Home() {
@@ -24,7 +24,6 @@ export default function Home() {
             </div>
         </div>
       </div>
-
     </div>
   )
 }
