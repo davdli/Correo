@@ -1,5 +1,7 @@
 import { request, gql } from 'graphql-request'; // make graph queries
 
+const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
+
 export const getPost = async () => {
   const query = gql`
     query MyQuery {
@@ -30,6 +32,8 @@ export const getPost = async () => {
       }
     }
   `
+
+  const results = await request(graphqlAPI, query)
 }
 
 
