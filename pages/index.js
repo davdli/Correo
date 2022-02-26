@@ -1,10 +1,7 @@
-import Head from 'next/head'
-import { PostCard, Categories, PostWidget } from '../components'
+import Head from 'next/head';
+import { PostCard, Categories, PostWidget } from '../components';
+import { getPosts } from '../services';
 
-const post = [
-  { title: 'React Testing', excerpt: 'Learn React Testing'},
-  { title: 'React with Tailwind', excerpt: 'Learn React with Tailwind'}
-]
 
 export default function Home() {
   return (
