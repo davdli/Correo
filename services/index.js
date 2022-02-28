@@ -1,6 +1,6 @@
 import { request, gql } from 'graphql-request'; // make graph queries
 
-const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
+const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT; // creating graphql api from endpoint
 
 export const getPosts = async () => {
   const query = gql`
