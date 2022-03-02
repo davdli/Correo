@@ -5,6 +5,7 @@ Correo is a blogging platform allowing individuals with unique perspectives to s
 - ![Next.js](https://img.shields.io/badge/-Next.js-black?logo=next.js&logoColor=white&style=flat)
 - ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=flat)
 - ![GraphQL](https://img.shields.io/badge/-GraphQL-f70776?logo=graphql&logoColor=white&style=flat)
+- ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white&style=flat)
 
 ## Setup
 - `git clone git@github.com:davdli/Correo.git` in terminal
