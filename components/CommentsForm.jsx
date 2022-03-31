@@ -14,7 +14,7 @@ const CommentsForm = ({ slug }) => {
 
   return (
     <div className='bg-white shadow-lg rounded-lg p-8 pb-12 mb-8'>
-      <h3 className='text-xl mb-8 font-semibold border-b pb-4'>CommentsForm</h3>
+      <h3 className='text-xl mb-8 font-semibold border-b pb-4'>Leave a reply</h3>
       <div className='grid grid-cols-1 gap-4 mb-4'>
         <textarea
           ref={commentEl}
@@ -39,6 +39,7 @@ const CommentsForm = ({ slug }) => {
           name='email'
         />
       </div>
+      {error && <p className='text-xs text-red-500'>All fields are required</p>}
     </div>
   )
 }
