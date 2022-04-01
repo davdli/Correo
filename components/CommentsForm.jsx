@@ -52,6 +52,7 @@ const CommentsForm = ({ slug }) => {
           >
           Post Comment
         </button>
+        {showSuccessMessage && <span className="text-xl float-right font-semibold mt-3 text-green-500">Comment submited for review</span>}
       </div>
     </div>
   )
