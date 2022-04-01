@@ -12,6 +12,10 @@ const CommentsForm = ({ slug }) => {
   const emailEl = useRef();
   const storeDataEl = useRef();
 
+  const handleCommentSubmission = () => {
+
+  }
+
   return (
     <div className='bg-white shadow-lg rounded-lg p-8 pb-12 mb-8'>
       <h3 className='text-xl mb-8 font-semibold border-b pb-4'>Leave a reply</h3>
@@ -40,6 +44,16 @@ const CommentsForm = ({ slug }) => {
         />
       </div>
       {error && <p className='text-xs text-red-500'>All fields are required</p>}
+      <div className='mt-8'>
+        <button
+          type='button'
+          onClick={handleCommentSubmission}
+          className='transition duration-500 ease border-2 hover:bg-[#1877f2] hover:text-white inline-block text-lg rounded-xl text-[#1877F2] px-8 py-3 cursor-pointer border-[#1877f2]'
+          >
+          Post Comment
+        </button>
+        {showSuccessMessage && <span className="text-xl float-right font-semibold mt-3 text-green-500">Comment submited for review</span>}
+      </div>
     </div>
   )
 }
