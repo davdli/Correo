@@ -54,6 +54,12 @@ const CommentsForm = ({ slug }) => {
           name='email'
         />
       </div>
+      <div className='grid grid-cols-1 gap-4 mb-4'>
+        <div>
+          <input res={storeDataEl} type='checkbox' id='storeData' name='storeData' value='true'/>
+          <label className='text-gray-500 cursor-pointer ml-2' htmlFor='storeData'>Save my e-mail and name for the next time I comment</label>
+        </div>
+      </div>
       {error && <p className='text-xs text-red-500'>All fields are required</p>}
       <div className='mt-8'>
         <button
