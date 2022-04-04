@@ -131,3 +131,12 @@ export const getCategories = async () => {
 
   return result.categories;
 }
+
+// making http request to next.js backend
+export const submitComment = async (obj) => {
+  const result = await fetch('/api/comments', {
+    method: 'POST',
+    body: JSON.stringify(obj)
+  })
+  return result.json();
+}
