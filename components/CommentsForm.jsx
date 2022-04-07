@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { submitComment } from '../services'
 
 const CommentsForm = ({ slug }) => {
   const [error, setError] = useState(false);
@@ -12,13 +13,18 @@ const CommentsForm = ({ slug }) => {
   const emailEl = useRef();
   const storeDataEl = useRef();
 
+  useEffect(() => {
+    nameEl.current.value = window.localStorage.getItem('name');
+    emailEl.current.value = window.localStorage.getItem('email');
+  }, [])
+
   const handleCommentSubmission = () => {
     setError(false);
 
     const { value: comment } = commentEl.current;
     const { value: name } = commentEl.current;
     const { value: email } = commentEl.current;
-    const { checked: storeData } = storeDataEl.current;
+    // const { checked: storeData } = storeDataEl.current;
 
     if (!comment || !name || !email) {
       setError(true);
@@ -28,12 +34,21 @@ const CommentsForm = ({ slug }) => {
     const commentObj = { name, email, comment, slug }
 
     if (storeData) {
-      localStorage.setItem('name', name);
-      localStorage.setItem('email', email);
+      window.localStorage.setItem('name', name);
+      window.localStorage.setItem('email', email);
     } else {
-      localStorage.removeItem('name', name);
-      localStorage.removeItem('email', email)
+      window.localStorage.removeItem('name', name);
+      window.localStorage.removeItem('email', email)
     }
+
+    submitComment(commentObj)
+      .then((res) => {
+        setshowSuccessMessage(true);
+
+        setTimeout(() => {
+          setshowSuccessMessage(false);
+        }, 3000);
+      })
   }
 
   return (
