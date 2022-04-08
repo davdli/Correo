@@ -139,7 +139,7 @@ export const submitComment = async (obj) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(obj)
-  })
+    body: JSON.stringify(obj),
+  });
   return result.json();
-}
+};
